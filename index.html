@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index - MyResume Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- ChatGTPsuggest -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <script src="assets/js/falling-hearts.js"></script>
+  <!-- Vendor CSS Files -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: MyResume
+  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex flex-column justify-content-center">
+
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+        <li><a href="#about"><i class="bi bi-heart navicon"></i><span>Our Story</span></a></li>
+        <li><a href="#resume"><i class="bi bi-calendar-event navicon"></i><span>Schedule</span></a></li>
+        <li><a href="#portfolio"><i class="bi bi-camera navicon"></i><span>Gallery</span></a></li>
+        <li><a href="#services"><i class="bi bi-geo-alt navicon"></i><span>Location</span></a></li>
+        <li><a href="#contact" onclick="preserveGuestName(event)"><i class="bi bi-envelope navicon"></i><span>RSVP</span></a></li>
+          <script>
+            function preserveGuestName(event) {
+              event.preventDefault();
+              const urlParams = new URLSearchParams(window.location.search);
+              const guest = urlParams.get("guest");
+              if (guest) {
+                const contactSection = document.querySelector('#contact iframe');
+                const baseSrc = "rsvp_autofill_form.html";
+                contactSection.src = baseSrc + "?guest=" + encodeURIComponent(guest);
+              }
+              document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+            }
+          </script>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section light-background">
+
+      <img src="assets/img/hero-bg.jpg" alt="">
+
+      <div class="container" data-aos="zoom-out">
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <h3>We are getting married!!!</h3>
+            <h2>Brenda <span style="font-family: 'Great Vibes';">&</span> Thach</h2>
+<p style="font-style: italic;">Together with their families, joyfully invite you to celebrate their wedding</p>
+            <p>on<span>November 15, 2025</span></p>
+
+            <div class="countdown" id="countdown"></div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+
+      <!-- Section Title -->
+      <section id="about" class="about section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Our Story</h2>
+        <p>We met by chance, fell in love by choice, and are building our future together with love and laughter.</p>
+      </div><!-- End Section Title -->
+
+      <section style="background: url('assets/img/profile-img.jpg') no-repeat center center/cover;">
+
+        <section class="heart-section">
+              <svg class="heart-shape" viewBox="0 0 512 512">
+                <path d="M462.3 62.6C407.5 15.9 326 24.3 
+                275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 
+                104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 
+                207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 
+                53-154.3-9.8-207.9z"/>
+              </svg>
+
+              <div class="heart-content">
+                <h2>Love</h2>
+                <p class="fst-italic">
+                  I love my ah bbb
+                </p>
+                </div>
+          </section>
+          </section>
+  
+
+<!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Gallery</h2>
+        <p>A few moments from our journey together.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">All</li>
+<li data-filter=".filter-moments">Our favorite moments</li>
+<li data-filter=".filter-prewedding">Pre-Wedding</li>
+          </ul><!-- End Portfolio Filters -->
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-moments">
+              <img src="assets/img/masonry-portfolio/Tpbl-1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>When it started</h4>
+                <a href="assets/img/Tpbl-1.jpg" title="When it started" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-moments">
+              <img src="assets/img/masonry-portfolio/Tpbl-2.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Thach's Fav moment of us</h4>
+                <a href="assets/img/masonry-portfolio/Tpbl-2.jpg" title="Thach's Fav moment of us" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-moments">
+              <img src="assets/img/masonry-portfolio/Tpbl-3.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Waching sunset together-Sunset Clif, Sandiego</h4>
+                <a href="assets/img/masonry-portfolio/Tpbl-3.jpg" title="Moments" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-prewedding">
+              <img src="assets/img/masonry-portfolio/Tpbl-4.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Preweding-1</h4>
+                <a href="assets/img/masonry-portfolio/Tpbl-4.jpg" title="Pre-weding" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-prewedding">
+              <img src="assets/img/masonry-portfolio/Tpbl-5.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Preweding-2</h4>
+                <a href="assets/img/masonry-portfolio/Tpbl-5.jpg" title="Pre-weding" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-prewedding">
+              <img src="assets/img/masonry-portfolio/Tpbl-6.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Pre-Wedding 3</h4>
+                <a href="assets/img/masonry-portfolio/Tpbl-6.jpg" title="Pre-Wedding" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-prewedding">
+              <img src="assets/img/masonry-portfolio/Tpbl-7.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Pre-Wedding 4</h4>
+                <a href="assets/img/masonry-portfolio/Tpbl-7.jpg" title="Pre-Wedding" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-prewedding">
+              <img src="assets/img/masonry-portfolio/Tpbl-8.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Pre-Wedding 5</h4>
+                <a href="assets/img/masonry-portfolio/Tpbl-8.jpg" title="He Asked, She Said Yes" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-moments">
+              <img src="assets/img/masonry-portfolio/Tpbl-9.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Bheem's side-look: "opps, sb is jelous"</h4>
+                <a href="assets/img/masonry-portfolio/Tpblo-9.jpg" title="Bheem" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-moments">
+              <img src="assets/img/masonry-portfolio/Tpbl-10.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>When she said yess!! <3</h4>
+                <a href="assets/img/masonry-portfolio/Tpblo-10.jpg" title="Yess" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-moments">
+              <img src="assets/img/masonry-portfolio/Tpbl-11.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Happy birthday with loves ones</h4>
+                <a href="assets/img/masonry-portfolio/Tpblo-11.jpg" title="Birthday" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-moments">
+              <img src="assets/img/masonry-portfolio/Tpbl-12.ipg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Cute Piggies</h4>
+                <a href="assets/img/masonry-portfolio/Tpblo-12.jpg" title="Piggies" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-moments">
+              <img src="assets/img/masonry-portfolio/Tpbl-13.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Oink</h4>
+                <a href="assets/img/masonry-portfolio/Tpblo-13.jpg" title="Oink" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-moments">
+              <img src="assets/img/masonry-portfolio/Tpbl-14.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Cute Piggies</h4>
+                <a href="assets/img/masonry-portfolio/Tpblo-14.jpg" title="Piggies" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-moments">
+              <img src="assets/img/masonry-portfolio/Tpbl-15.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>She's drunk and mine now ha ha ha</h4>
+                <a href="assets/img/masonry-portfolio/Tpblo-15.jpg" title="Mine" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-moments">
+              <img src="assets/img/masonry-portfolio/Tpbl-16.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Uncle adn Aunty</h4>
+                <a href="assets/img/masonry-portfolio/Tpblo-16.jpg" title="Uncle-Aunty" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-moments">
+              <img src="assets/img/masonry-portfolio/Tpbl-17.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Hiking</h4>
+                <a href="assets/img/masonry-portfolio/Tpblo-17.jpg" title="Hiking" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-moments">
+              <img src="assets/img/masonry-portfolio/Tpbl-18.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Hiking</h4>
+                <a href="assets/img/masonry-portfolio/Tpblo-18.jpg" title="Mine" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+          </div><!-- End Portfolio Container -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Section -->
+
+    
+    <!-- Resume Section -->
+    <section id="resume" class="resume section">
+<div class="container section-title" data-aos="fade-up">
+  <h2>Schedule</h2>
+</div>
+<div class="container d-flex justify-content-center">
+  <div class="timeline text-center">
+    <div class="timeline-item">
+      <h4>6:30 PM</h4>
+      <p><strong>Reception</strong>
+    </div>
+    <div class="timeline-item">
+      <h4>7:30 PM</h4>
+      <p><strong>Dinner</strong>
+    </div>
+  </div>
+</div>
+</section><!-- /Resume Section -->
+
+    
+    <!-- Location Section -->
+    <section id="services" class="services section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Location</h2>
+        <p>Si Chuan Dou Hua Restaurant-Beach Road.  We can’t wait to see you there!</p>
+        <br><p>Level 1 Park Royal, 7500 Beach Rd, Singapore 199591</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Location Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+            <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>RSVP</h2>
+        <p>Please fill out the form below to let us know you're attending.</p>
+      </div>
+      
+<div class="container" data-aos="fade-up">
+  <div class="ratio ratio-4x3">
+    <iframe src="rsvp_autofill_form.html" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0" style="border:none;overflow:hidden;" allowfullscreen></iframe>
+    <p class="text-center mt-3">You’ll receive an email confirmation after submission. Thank you!</p>
+  </div>
+</div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+  <div class="container text-center">
+    <h3>Brenda & Thach</h3>
+    <p>With love and gratitude, we invite you to celebrate this special day with us.</p>
+      
+    <p class="small">© 2025 Brenda & Thach | Designed with ♥</p>
+  </div>
+</footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+
+<!-- Music Player -->
+<style>
+  #music-toggle {
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  #music-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+
+  #music-toggle img {
+    width: 25px;
+    height: 25px;
+    pointer-events: none;
+  }
+
+  .vibrating {
+    animation: pulse 1.2s infinite, rotate 4s linear infinite, glow 2s ease-in-out infinite;
+    box-shadow: 0 0 15px rgba(139, 0, 0, 0.6), 0 0 25px rgba(139, 0, 0, 0.4);
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05) rotate(1deg); }
+    100% { transform: scale(1) rotate(-1deg); }
+  }
+
+  @keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  @keyframes glow {
+    0% { box-shadow: 0 0 10px rgba(139, 0, 0, 0.2), 0 0 20px rgba(139, 0, 0, 0.2); }
+    50% { box-shadow: 0 0 20px rgba(139, 0, 0, 0.6), 0 0 30px rgba(139, 0, 0, 0.5); }
+    100% { box-shadow: 0 0 10px rgba(139, 0, 0, 0.2), 0 0 20px rgba(139, 0, 0, 0.2); }
+  }
+</style>
+
+<audio id="background-music"></audio>
+<div id="music-toggle" title="Play/Pause Music">
+  <img id="play-icon" src="https://w.ladicdn.com/675faed0e377b9028f9ce15b/z6534118287384_2d3714509a6ba1189cdd2f91394abbba-20250423093345-lgbe3.jpg" alt="Play Icon">
+  <img id="pause-icon" src="https://w.ladicdn.com/675faed0e377b9028f9ce15b/musical-note-20250423091909-s5ori.png" alt="Pause Icon" style="display: none;">
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const audio = document.getElementById("background-music");
+    const toggleButton = document.getElementById("music-toggle");
+    const playIcon = document.getElementById("play-icon");
+    const pauseIcon = document.getElementById("pause-icon");
+
+    const playlist = [
+      "https://bachlong-trading.com/wp-content/uploads/2024/07/oke-Cody-Francis-Honey-Take-My-Hand-online-audio-converter.com_.mp3",
+      "https://bachlong-trading.com/wp-content/uploads/2024/05/EM-DONG-Y-I-DO-DUC-PHUC-x-911-x-KHAC-HUNG-1ST-LIVE-STAGE.mp3",
+      "https://bachlong-trading.com/wp-content/uploads/2024/06/Bruno-Mars-Marry-You-Official-Lyric-Video-mp3cut.net_.mp3"
+    ];
+
+    let currentTrack = 0;
+    let isPlaying = false;
+    let hasStarted = false;
+
+    function loadTrack(index) {
+      audio.src = playlist[index];
+      audio.load();
+    }
+
+    function playTrack() {
+      audio.play().then(() => {
+        isPlaying = true;
+        playIcon.style.display = "none";
+        pauseIcon.style.display = "block";
+        toggleButton.classList.add("vibrating");
+      }).catch((e) => {
+        console.log("Playback error:", e);
+      });
+    }
+
+    function pauseTrack() {
+      audio.pause();
+      isPlaying = false;
+      playIcon.style.display = "block";
+      pauseIcon.style.display = "none";
+      toggleButton.classList.remove("vibrating");
+    }
+
+    // Load first track
+    loadTrack(currentTrack);
+
+    // On first body click, play music
+    document.body.addEventListener("click", function () {
+      if (!hasStarted) {
+        playTrack();
+        hasStarted = true;
+      }
+    }, { once: true });
+
+    // On toggle button click
+    toggleButton.addEventListener("click", function (event) {
+      event.stopPropagation();
+      if (isPlaying) {
+        pauseTrack();
+      } else {
+        playTrack();
+      }
+    });
+
+    // Automatically go to next song and loop playlist
+    audio.addEventListener("ended", function () {
+      currentTrack = (currentTrack + 1) % playlist.length;
+      loadTrack(currentTrack);
+      playTrack();
+    });
+  });
+</script>
+
+</body>
+
+</html>
