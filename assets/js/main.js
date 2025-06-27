@@ -246,3 +246,80 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+document.addEventListener("DOMContentLoaded", function () {
+  const urlParams = new URLSearchParams(window.location.search);
+  const guest = urlParams.get("guest");
+  if (guest) {
+    const nameField = document.getElementById("guestName");
+    if (nameField) {
+      nameField.value = decodeURIComponent(guest.replace(/\+/g, ' '));
+    }
+  }
+
+  const form = document.getElementById("rsvpForm");
+  const confirmationMessage = document.getElementById("confirmationMessage");
+
+  if (form) {
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      confirmationMessage.style.display = "block";
+      form.reset();
+    });
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const urlParams = new URLSearchParams(window.location.search);
+  const guest = urlParams.get("guest");
+  const greeting = document.getElementById("guestGreeting");
+  const nameField = document.getElementById("guestName");
+
+  if (guest) {
+    const decodedGuest = decodeURIComponent(guest.replace(/\+/g, ' '));
+    if (nameField) {
+      nameField.value = decodedGuest;
+    }
+    if (greeting) {
+      greeting.innerHTML = `Dear ${decodedGuest},`;
+    }
+  }
+
+  const form = document.getElementById("rsvpForm");
+  const confirmationMessage = document.getElementById("confirmationMessage");
+
+  if (form) {
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      confirmationMessage.style.display = "block";
+      form.reset();
+    });
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const urlParams = new URLSearchParams(window.location.search);
+  const guest = urlParams.get("guest");
+  const greeting = document.getElementById("guestGreeting");
+  const nameField = document.getElementById("guestName");
+
+  if (guest) {
+    const decodedGuest = decodeURIComponent(guest.replace(/\+/g, ' '));
+    if (nameField) {
+      nameField.value = decodedGuest;
+    }
+    if (greeting) {
+      greeting.innerHTML = `<span class="greeting-normal">Dear</span> <span class="greeting-name">${decodedGuest}</span>,`;
+    }
+  }
+
+  const form = document.getElementById("rsvpForm");
+  const confirmationMessage = document.getElementById("confirmationMessage");
+
+  if (form) {
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      confirmationMessage.style.display = "block";
+      form.reset();
+    });
+  }
+});
