@@ -48,25 +48,13 @@
 
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
-        <li><a href="#about"><i class="bi bi-heart navicon"></i><span>Our Story</span></a></li>
-        <li><a href="#resume"><i class="bi bi-calendar-event navicon"></i><span>Schedule</span></a></li>
-        <li><a href="#portfolio"><i class="bi bi-camera navicon"></i><span>Gallery</span></a></li>
-        <li><a href="#services"><i class="bi bi-geo-alt navicon"></i><span>Location</span></a></li>
-        <li><a href="#contact" onclick="preserveGuestName(event)"><i class="bi bi-envelope navicon"></i><span>RSVP</span></a></li>
-          <script>
-            function preserveGuestName(event) {
-              event.preventDefault();
-              const urlParams = new URLSearchParams(window.location.search);
-              const guest = urlParams.get("guest");
-              if (guest) {
-                const contactSection = document.querySelector('#contact iframe');
-                const baseSrc = "rsvp_autofill_form.html";
-                contactSection.src = baseSrc + "?guest=" + encodeURIComponent(guest);
-              }
-              document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
-            }
-          </script>
+        <li><a href="#home" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+        <li><a href="#story"><i class="bi bi-heart navicon"></i><span>Our Story</span></a></li>
+        <li><a href="#schedule"><i class="bi bi-calendar-event navicon"></i><span>Schedule</span></a></li>
+        <li><a href="#galery"><i class="bi bi-camera navicon"></i><span>Gallery</span></a></li>
+        <li><a href="#location"><i class="bi bi-geo-alt navicon"></i><span>Location</span></a></li>
+        <li><a href="#RSVP" ><i class="bi bi-envelope navicon"></i><span>RSVP</span></a></li>
+          
       </ul>
     </nav>
 
@@ -74,8 +62,8 @@
 
   <main class="main">
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero section light-background">
+    <!-- Gallery Section -->
+    <section id="home" class="hero section light-background">
 
       <img src="assets/img/hero-bg.jpg" alt="">
 
@@ -92,12 +80,12 @@
         </div>
       </div>
 
-    </section><!-- /Hero Section -->
+    </section><!-- /Gallery Section -->
 
-    <!-- About Section -->
+    <!-- Story Section -->
 
       <!-- Section Title -->
-      <section id="about" class="about section">
+      <section id="story" class="about section">
       <div class="container section-title" data-aos="fade-up">
         <h2>Our Story</h2>
         <p>We met by chance, fell in love by choice, and are building our future together with love and laughter.</p>
@@ -124,8 +112,8 @@
           </section>
   
 
-<!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
+<!-- Story Section -->
+    <section id="galery" class="portfolio section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
@@ -149,7 +137,7 @@
               <img src="assets/img/masonry-portfolio/Tpbl-1.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>When it started</h4>
-                <a href="assets/img/masonry-portfolio/Tpbl-1.jpg" title="When it started" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="assets/img/Tpbl-1.jpg" title="When it started" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
 
@@ -295,11 +283,11 @@
 
       </div>
 
-    </section><!-- /Portfolio Section -->
+    </section><!-- /Gallery Section -->
 
     
-    <!-- Resume Section -->
-    <section id="resume" class="resume section">
+    <!-- Schedule Section -->
+    <section id="schedule" class="resume section">
 <div class="container section-title" data-aos="fade-up">
   <h2>Schedule</h2>
 </div>
@@ -319,7 +307,7 @@
 
     
     <!-- Location Section -->
-    <section id="services" class="services section">
+    <section id="location" class="services section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
@@ -362,8 +350,8 @@
 
     </section><!-- /Location Section -->
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
+    <!-- RSVP Section -->
+    <section id="RSVP" class="contact section">
 
             <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
@@ -372,13 +360,37 @@
       </div>
       
 <div class="container" data-aos="fade-up">
-  <div class="ratio ratio-4x3">
-    <iframe src="rsvp_autofill_form.html" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0" style="border:none;overflow:hidden;" allowfullscreen></iframe>
-    <p class="text-center mt-3">You’ll receive an email confirmation after submission. Thank you!</p>
-  </div>
+  
+    <div class="rsvp-form-wrapper">
+      <form class="rsvp-form" id="rsvpForm">
+        <div id="guestGreeting" class="guest-greeting"></div>
+        <input type="hidden" id="guestName" name="guestName" required>
+
+        <label for="attendance">Will you attend?</label>
+        <select id="attendance" name="attendance" required>
+          <option value="">Select an option</option>
+          <option value="Yes, I will attend">Yes, I will attend</option>
+          <option value="No, I can't make it">No, I can't make it</option>
+        </select>
+
+        <label for="plusOne">Will you bring a plus one?</label>
+        <select id="plusOne" name="plusOne" required>
+          <option value="">Select an option</option>
+          <option value="Yes, me and +1">Yes, me and +1</option>
+          <option value="No, only me">No, only me</option>
+        </select>
+
+        <label for="message">Message (Optional)</label>
+        <textarea id="message" name="message" rows="4" placeholder="Leave us a note..."></textarea>
+
+        <button type="submit">Submit RSVP</button>
+        <p class="confirmation-message" id="confirmationMessage">Thank you for your RSVP! 💌</p>
+      </form>
+    </div>
+    
 </div>
 
-    </section><!-- /Contact Section -->
+    </section><!-- /RSVP Section -->
 
   </main>
 
