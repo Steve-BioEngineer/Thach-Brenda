@@ -214,7 +214,7 @@ if (rsvpForm) {
   if (guestRaw) {
     const decoded = decodeURIComponent(guestRaw.replace(/\+/g, ' '));
     $('#guestName').value = decoded;
-    $('#guestGreeting').innerHTML = `Dear <span class="greeting-name">${decoded}</span>,`;
+    $('#guestGreeting').innerHTML = `Dear <span class="greeting-name">${decoded}</span> ,`;
   }
 
   /* 5 — Normal submission */
