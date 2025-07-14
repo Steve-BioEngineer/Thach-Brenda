@@ -251,13 +251,13 @@ button[type="submit"] {
 
 .overlay-button {
   position: absolute;
-  bottom: -20px;
+  bottom: 0px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.5);
   color: #6b4c3b;
   border: none;
-  padding: 0.75rem 1.5rem;
+  padding: 0.4rem 1rem;
   font-size: 1rem;
   border-radius: 30px;
   cursor: pointer;
