@@ -113,7 +113,22 @@
         },
       });
     });
-
+    /* --------------------------------------------------
+    * Enable Swiper Lazy
+     * -------------------------------------------------- */
+    new Swiper('.story-swiper', {
+      loop      : true,
+      effect    : 'fade',
+      preloadImages : false,          // <-- required
+      lazy: {
+        loadPrevNext       : true,
+        loadPrevNextAmount : 2        // 1–2 next/prev slides
+      },
+      autoplay  : { delay: 4500, disableOnInteraction: false },
+      navigation: { nextEl: '.story-swiper .swiper-button-next',
+                    prevEl: '.story-swiper .swiper-button-prev' },
+      pagination: { el: '.story-swiper .swiper-pagination', clickable: true },
+    });
     /* --------------------------------------------------
      * GLightbox & Isotope
      * -------------------------------------------------- */
