@@ -264,8 +264,8 @@ if (rsvpForm) {
 
     if (audio && musicBtn) {
       const playlist = [
-        'https://bachlong-trading.com/wp-content/uploads/2024/07/oke-Cody-Francis-Honey-Take-My-Hand-online-audio-converter.com_.mp3',
         'https://bachlong-trading.com/wp-content/uploads/2024/05/EM-DONG-Y-I-DO-DUC-PHUC-x-911-x-KHAC-HUNG-1ST-LIVE-STAGE.mp3',
+        'https://bachlong-trading.com/wp-content/uploads/2024/07/oke-Cody-Francis-Honey-Take-My-Hand-online-audio-converter.com_.mp3',
         'https://bachlong-trading.com/wp-content/uploads/2024/06/Bruno-Mars-Marry-You-Official-Lyric-Video-mp3cut.net_.mp3',
       ];
       let current = 0, playing = false;
