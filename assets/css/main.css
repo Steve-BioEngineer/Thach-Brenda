@@ -102,7 +102,24 @@ body {
   font-size: 18px;
   color: #7d5a50;
 }
+/* Story carousel */
+.story-carousel .swiper-slide {position:relative; overflow:hidden;}
+.slide-bg{
+  width:100%; height:0; padding-bottom:56.25%;         /* 16:9 aspect */
+  background-size:cover; background-position:center;
+  transition:transform .8s ease;
+}
+.swiper-slide-active .slide-bg{transform:scale(1.05);}  /* gentle zoom */
 
+.heart-wrapper{position:absolute; inset:0; display:flex; justify-content:center; align-items:center;}
+.heart-shape{width:70%; fill:rgba(255,255,255,.15);}
+.heart-content{position:absolute; text-align:center; width:70%;}
+
+/* smaller phones */
+@media (max-width:576px){
+  .heart-shape{width:85%;}
+  .heart-content{width:85%;}
+}
 /* Heart-shaped clipping for the story panel  */
 
 .heart-section {
