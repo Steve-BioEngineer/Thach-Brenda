@@ -267,9 +267,9 @@ if (rsvpForm) {
 
     if (audio && musicBtn) {
       const playlist = [
+        'https://bachlong-trading.com/wp-content/uploads/2024/07/oke-Cody-Francis-Honey-Take-My-Hand-online-audio-converter.com_.mp3',
         'https://bachlong-trading.com/wp-content/uploads/2024/05/EM-DONG-Y-I-DO-DUC-PHUC-x-911-x-KHAC-HUNG-1ST-LIVE-STAGE.mp3',
         'https://bachlong-trading.com/wp-content/uploads/2024/06/Bruno-Mars-Marry-You-Official-Lyric-Video-mp3cut.net_.mp3',
-        'https://bachlong-trading.com/wp-content/uploads/2024/07/oke-Cody-Francis-Honey-Take-My-Hand-online-audio-converter.com_.mp3',
       ];
       let current = 0, playing = false;
 
@@ -292,9 +292,34 @@ if (rsvpForm) {
       };
 
       load(current);
-      document.body.addEventListener('click', function init() { play(); this.removeEventListener('click', init); }, { once: true });
-      on(musicBtn, 'click', (e) => { e.stopPropagation(); playing ? pause() : play(); });
-      on(audio, 'ended', () => { current = (current + 1) % playlist.length; load(current); play(); });
+      const userMuted = localStorage.getItem('musicMuted') === 'true';
+      audio.volume = 0.1;
+
+      if (!userMuted) {
+        document.body.addEventListener('click', function init() {
+          play();
+          this.removeEventListener('click', init);
+        }, { once: true });
+      }
+
+      on(musicBtn, 'click', (e) => {
+        e.stopPropagation();
+        if (playing) {
+          pause();
+          localStorage.setItem('musicMuted', 'true');
+        } else {
+          play();
+          localStorage.setItem('musicMuted', 'false');
+        }
+      });
+
+      on(audio, 'ended', () => {
+        current = (current + 1) % playlist.length;
+        load(current);
+        if (!localStorage.getItem('musicMuted') || localStorage.getItem('musicMuted') === 'false') {
+          play();
+        }
+      });
     }
 
     /* --------------------------------------------------
