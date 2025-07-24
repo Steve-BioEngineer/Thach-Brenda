@@ -293,7 +293,7 @@ if (rsvpForm) {
 
       load(current);
       const userMuted = localStorage.getItem('musicMuted') === 'true';
-      audio.volume = 0.1;
+      audio.volume = 0.2;
 
       if (!userMuted) {
         document.body.addEventListener('click', function init() {
